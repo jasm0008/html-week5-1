@@ -1,13 +1,15 @@
 /* Apply a background colour for the whole page (or the body tag)*/
 body{
     background-color: green;
-    /* changing the font family */
+    /* changing the font family - alywas do a list of fall-backs*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* targetting the paragraphs and h2 tags to be a specific font colours
 CSS specificity of 001 - one tag*/
 p, h2{
     color: silver;
+    /* add a border to all the paragraph */
+    border: goldenrod 5px dashed;
 }
 
 /*targeting specifically the paragraph inside the footer*/
