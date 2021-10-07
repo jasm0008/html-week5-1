@@ -2,12 +2,18 @@
 body{
     background-color: green;
 }
-/* target*/
-p{
+/* targetting the paragraphs*/
+p, h2{
     color: silver;
 }
+
+/*targeting specifically the paragraph inside the footer*/
 
 footer p{
     color: white;
     font-size:10px;
+}
+/* target an element based on its class (using class larger) - use a dot*/
+.larger{
+    font-size: 24px;
 }
