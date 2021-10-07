@@ -2,7 +2,12 @@
 body{
     background-color: green;
 }
-
+/* target*/
 p{
     color: silver;
+}
+
+footer p{
+    color: white;
+    font-size:10px;
 }
