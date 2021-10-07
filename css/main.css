@@ -2,7 +2,8 @@
 body{
     background-color: green;
 }
-/* targetting the paragraphs*/
+/* targetting the paragraphs and h2 tags to be a specific font colours
+CSS specificity of 001 - one tag*/
 p, h2{
     color: silver;
 }
@@ -16,4 +17,64 @@ footer p{
 /* target an element based on its class (using class larger) - use a dot*/
 .larger{
     font-size: 24px;
+}
+
+/*target an element based on its ID - use a #
+An ID should be unique (only one element on the page should have it)
+CSS specificity of 0100 - one tag*/
+*/
+#play{
+    font-weight : bold;
+    font-size: 20px;
+}
+
+/* use and attribute selector to target only .jpg
+$= means 'ends with' - so we are looking for image tags for whose source ends with "jpg" */
+img[src$="jpg"]{
+    width:200px;
+}
+
+/* pseudo classes can be used to target the states of element - for example, the "visited" state
+of an anchor tag */
+a:visited{
+    color:springgreen;
+}
+/* while only links have a visited state, any element can have a hover state */
+a:hover{
+    color:violet;
+}
+
+/* use a pseudo class to target an element based on its position inside another element 
+can do last-child, first-child, nth-child() */
+p:last-child{
+    font-style: italic;
+}
+
+/* using nth-child we can style multiple elemetns based on their position, based on a formula
+nth-child(5) - will style only the fifth tag
+nth-child(2) - does every other element starting with the second
+nth-child(2n-1) - does every other lement starting with the first */
+li:nth-child(1n-1){
+    background-color:brown;
+}
+
+/* inline vs block elements */
+/* selection is a block element - meaning it takes up the whole line by default and pushes 
+other elemetns down to the new line */
+section{
+    width: 400px;
+    height: 200px;
+    background-color: cadetblue;
+}
+
+nav{
+    /* by default, a block elements takes up the width of the page (or the element inside of) */
+    background-color: darkslateblue;
+}
+
+span{
+    /* inline elements can't have a width and a height, so your browser will ignore these properties */
+    width: 100px;
+    height: 200px;
+    background-color: fuchsia;
 }
